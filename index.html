@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+    <link
+      rel="shortcut icon"
+      href="images/devchallenges.png"
+      type="image/x-icon">
+    <link rel="stylesheet" href="css/CurrentWeather/CurrentWeather.css">
+    <link rel="stylesheet" href="css/cards/cards.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    
+    <title>Weather App</title>
+  </head>
+  <body>
+    <!-- main container -->
+    <div class="app-container">
+
+
+      <div class="CurrentWeather CurrentWeather-js">
+        <div class="SearchForPlaces">
+          <button class="SearchForPlaces-Btn search-for-place-js" title="alt+s">Search for places</button>
+          <div class="switchCFdegree">
+          </div>
+        </div>
+
+        <div class="CurrentWeather-Img">
+          <img class="currentWeatherImg-js" src="images/rain.svg" alt="clear sky weather image">
+        </div>
+
+        <div class="CurrentWeather-Temp">
+          <span class="CurrentWeather-Value">15</span>
+
+          <span class="CurrentWeather-Unit">C</span>
+        </div>
+
+        <p class="CurrentWeather-Desc">Shower</p>
+
+        <div class="CurrentWeather-Date">
+          <span>Today</span> &nbsp; . &nbsp; <span class="date date-js">Fri, 5 June</span>
+        </div>
+
+        <div class="CurrentWeather-Location">
+          <img src="images/location-icon.svg" alt="location icon" class="Location-Icon">
+          <span class="Location-Address">Helsinki</span>
+        </div>
+
+        <!-- absolutely positioned -->
+        <div class="SearchForPlacesInput SearchForPlacesInput-js">
+          <div class="SearchForPlacesInput-wrapper">
+            <img class="exit-icon" src="images/exit-icon.svg" alt="exit icon">
+            <div class="Form">
+              <label class="Form-Input">
+                <img class="Search-Icon" src="images/search-icon.svg" alt="search icon">
+                <input class="Form-InputField" type="text" name="location" placeholder="search cities">
+              </label>
+              <button class="Form-SubmitBtn">Search</button>
+            </div>
+            <p class="errorInput">Please enter valid name <br>[city name, country name, continent name]</p>
+            <p class="recent-cities-name"><img class="recent-img" src="images/recent.svg" alt="recent image svg"> recent</p>
+            <div class="Cities">
+              <!-- <div class="Cities-Item">
+                <span class="Cities-Name">London</span>
+                <img class="right-angle-icon" src="images/right-angle-icon.svg" alt="right arrow icon">
+              </div>
+              <div class="Cities-Item">
+                <span class="Cities-Name">Barcelona</span>
+                <img class="right-angle-icon" src="images/right-angle-icon.svg" alt="right arrow icon">
+              </div> -->
+            </div>
+          </div>
+        </div> <!--absolutely positioned-->
+      </div> <!--current weather section-->
+
+
+      <div class="cards-container">
+        <div class="cards-wrapper">
+          <!-- hightlights section -->
+          <div class="Highlights">
+            <h3 class="Highlights-Heading">Today's Highlights</h3>
+            <div class="Highlights-Row">
+              <div class="Highlights-Wind">
+                <p class="Highlights-WindHeading">Wind status</p>
+                <p class="Highlights-WindValue">
+                  <span class="Highlights-WindValueNum">7</span>
+                  mph
+                </p>
+                <p class="Highlights-WindDirection">
+                  <img src="images/wsw-icon.svg" alt="wsw direction compass icon">
+                  wsw
+                </p>
+              </div>
+
+              <div class="Highlights-Humidity">
+                <p class="Highlights-HumidityHeading">Humidity</p>
+                <p class="Highlights-HumidityPer">
+                  <span class="Highlights-HumidityPerValue">84</span> %
+                </p>
+                <div class="Highlights-HumidityPerIndicator">
+                  <div class="indicatorPer">
+                    <span>0</span>
+                    <span>50</span>
+                    <span>100</span>
+                  </div>
+                  <div class="indicatorLevelContainer">
+                    <div class="indicatorLevel humidityIndicatorLevel"></div>
+                  </div>
+                  <p class="indicatorPerSymbol">%</p>
+                </div>
+              </div>
+
+              <div class="Highlights-Visibility">
+                <p class="Highlights-VisibilityHeading">Visibility</p>
+                <p class="Highlights-VisibilityDistance">
+                  <span class="Highlights-VisibilityDistanceValue">6,4</span> miles
+                </p>
+              </div>
+
+              <div class="Highlights-Air">
+                <p class="Highlights-AirHeading">Air Pressure</p>
+                <p class="Highlights-AirPressure">
+                  <span class="Highlights-AirPressureValue">998</span> mb
+                </p>
+              </div>
+            </div>
+          </div> <!--highlights section end-->
+
+
+          <div class="FutureCard">
+            <div class="FutureCard-Item">
+              <p class="FutureCard-Date">Tomorrow</p>
+              <img class="FutureCard-WeatherImg" src="images/rain.svg" alt="future weather image">
+              <p class="FutureCard-Desc">clear sky</p>
+              <div class="FutureCard-MinMaxTemp">
+                <div>
+                  <span class="FutureCard-MaxTempValue future-temp-js">16</span>
+                  <span class="FutureCard-MaxTemp future-temp-unit-js">C</span>
+                </div>
+                <div>
+                  <span class="FutureCard-MinTempValue future-temp-js">11</span>
+                  <span class="FutureCard-MinTemp future-temp-unit-js">C</span>
+                </div>
+              </div>
+            </div>
+            <div class="FutureCard-Item">
+              <p class="FutureCard-Date">Tomorrow</p>
+              <img class="FutureCard-WeatherImg" src="images/rain.svg" alt="future weather image">
+              <p class="FutureCard-Desc">clear sky</p>
+              <div class="FutureCard-MinMaxTemp">
+                <div>
+                  <span class="FutureCard-MaxTempValue future-temp-js">16</span>
+                  <span class="FutureCard-MaxTemp future-temp-unit-js"> C</span>
+                </div>
+                <div>
+                  <span class="FutureCard-MinTempValue future-temp-js">11</span>
+                  <span class="FutureCard-MinTemp future-temp-unit-js">C</span>
+                </div>
+              </div>
+            </div>
+            <div class="FutureCard-Item">
+              <p class="FutureCard-Date">Tomorrow</p>
+              <img class="FutureCard-WeatherImg" src="images/rain.svg" alt="future weather image">
+              <p class="FutureCard-Desc">clear sky</p>
+              <div class="FutureCard-MinMaxTemp">
+                <div>
+                  <span class="FutureCard-MaxTempValue future-temp-js">16</span>
+                  <span class="FutureCard-MaxTemp future-temp-unit-js"> C</span>
+                </div>
+                <div>
+                  <span class="FutureCard-MinTempValue future-temp-js">11</span>
+                  <span class="FutureCard-MinTemp future-temp-unit-js">C</span>
+                </div>
+              </div>
+            </div>
+            <div class="FutureCard-Item">
+              <p class="FutureCard-Date">Tomorrow</p>
+              <img class="FutureCard-WeatherImg" src="images/rain.svg" alt="future weather image">
+              <p class="FutureCard-Desc">clear sky</p>
+              <div class="FutureCard-MinMaxTemp">
+                <div>
+                  <span class="FutureCard-MaxTempValue future-temp-js">16</span>
+                  <span class="FutureCard-MaxTemp future-temp-unit-js"> C</span>
+                </div>
+                <div>
+                  <span class="FutureCard-MinTempValue future-temp-js">11</span>
+                  <span class="FutureCard-MinTemp future-temp-unit-js">C</span>
+                </div>
+              </div>
+            </div>
+            <div class="FutureCard-Item">
+              <p class="FutureCard-Date">Tomorrow</p>
+              <img class="FutureCard-WeatherImg" src="images/rain.svg" alt="future weather image">
+              <p class="FutureCard-Desc">clear sky</p>
+              <div class="FutureCard-MinMaxTemp">
+                <div>
+                  <span class="FutureCard-MaxTempValue future-temp-js">16</span>
+                  <span class="FutureCard-MaxTemp future-temp-unit-js"> C</span>
+                </div>
+                <div>
+                  <span class="FutureCard-MinTempValue future-temp-js">11</span>
+                  <span class="FutureCard-MinTemp future-temp-unit-js">C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <script src="js/GetWeatherData.js"></script>
+  </body>
+</html>

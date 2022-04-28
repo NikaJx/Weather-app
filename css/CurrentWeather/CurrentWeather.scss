@@ -1,0 +1,272 @@
+.CurrentWeather {
+  width: 100%;
+  height: 100%;
+  @media (max-width: 768px) {
+    min-height: 620px;
+    max-height: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  background-color: #1e213a;
+  padding: 1.5rem 0;
+  position: relative;
+
+  &-Img {
+    margin-top: 2rem;
+    height: 250px;
+    background-image: url("../../images/Cloud-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 576px) {
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 786px) {
+      margin-top: 0;
+    }
+
+    img {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  &-Temp {
+    text-align: center;
+  }
+
+  &-Value {
+    font-size: 6rem;
+    color: white;
+    line-height: 6rem;
+  }
+
+  &-Unit {
+    font-size: 3rem;
+    color: #a09fb1;
+    position: relative;
+    margin-left: 1rem;
+    &::before {
+      content: "o";
+      position: absolute;
+      font-weight: normal;
+      top: 0;
+      font-size: .7rem;
+    }
+  }
+
+  &-Desc {
+    text-align: center;
+    color: #a09fb1;
+    font-size: 1.8rem;
+  }
+
+  &-Date {
+    margin-top: 3rem;
+    color: #a09fb1;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  &-Location {
+    margin-top: 1rem;
+    color: #a09fb1;
+    text-align: center;
+
+    img {
+      width: 12px;
+      height: auto;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.SearchForPlaces {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  height: 40px;
+
+  &-Btn {
+    font-size: 1rem;
+    height: 100%;
+    padding: 0 1.3rem;
+    background-color: #6e707a;
+    color: #e7e7eb;
+    border: none;
+    box-shadow: 0px 4px 15px -5px black;
+    cursor: pointer;
+    transition: transform 300ms cubic-bezier(.14,.73,.65,2.05);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.switch {
+  &CFdegree {
+    display: flex;
+  }
+
+  &C,
+  &F {
+    background-color: #585676;
+    border-radius: 10rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #e7e7eb;
+    font-weight: bold;
+    box-shadow: 0px 4px 15px -5px black;
+
+    &::before {
+      content: "o";
+      font-weight: normal;
+      margin-bottom: 1rem;
+      font-size: .7rem;
+    }
+  }
+
+  &F {
+    margin-left: 0.5rem;
+  }
+
+  &Active {
+    background-color: #e7e7eb;
+    color: #110e3c;
+  }
+}
+
+// ----------------------------------------------------
+
+.SearchForPlacesInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e213a;
+
+  &-transition {
+    transition: 300ms ease-out;
+  }
+
+  &-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    @media (min-width: 400px) {
+      width: 80%;
+    }
+  }
+}
+
+.Form {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+
+  &-Input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #8c8c97;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &Field {
+      background-color: rgba(255, 255, 255, 0);
+      font-size: 0.9rem;
+      border: none;
+      margin-left: 0.7rem;
+      color: #e7e7eb;
+      width: 100%;
+
+      &::placeholder {
+        color: #616475;
+      }
+    }
+
+    // and search icon, css below
+  }
+
+  &-SubmitBtn {
+    background-color: #3c47e9;
+    border: 1px solid #3c47e9;
+    color: #e7e7eb;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    transition: 300ms ease-out;
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+}
+
+.Search-Icon {
+  width: 20px;
+  height: 20px;
+}
+
+.Cities {
+  margin-top: 2rem;
+  display: grid;
+  grid-row-gap: 1.5rem;
+
+  &-Item {
+    border: 1px solid #616475;
+    cursor: pointer;
+
+    @media (min-width: 992px) {
+      border: 1px solid rgba(255, 255, 255, 0);
+      & .right-angle-icon {
+        visibility: hidden;
+      }
+      &:hover {
+        border: 1px solid #8c8c97;
+      }
+
+      &:hover .right-angle-icon {
+        visibility: visible;
+      }
+    }
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-Name {
+    color: #e7e7eb;
+    font-size: 0.8rem;
+  }
+}
+
+.right-angle-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.exit-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(90%);
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+}

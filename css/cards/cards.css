@@ -1,0 +1,262 @@
+.cards-container {
+  background-color: #100E1D;
+}
+
+.cards-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .cards-wrapper {
+    width: 80%;
+  }
+}
+
+.Highlights-Heading {
+  color: #E7E7EB;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+@media (min-width: 786px) {
+  .Highlights-Heading {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-top: unset;
+  }
+}
+
+.Highlights-Row {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: 2rem;
+}
+
+@media (min-width: 786px) {
+  .Highlights-Row {
+    grid-gap: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.Highlights-WindHeading {
+  color: #E7E7EB;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.Highlights-WindValue {
+  text-align: center;
+  color: #E7E7EB;
+  font-size: 1.5rem;
+}
+
+.Highlights-WindValueNum {
+  font-size: 2.4rem;
+  vertical-align: center;
+  font-weight: 500;
+}
+
+.Highlights-WindDirection {
+  text-align: center;
+  color: #E7E7EB;
+  font-size: .9rem;
+}
+
+.Highlights-WindDirection img {
+  width: 25px;
+  height: 25px;
+  vertical-align: bottom;
+}
+
+.Highlights-HumidityHeading {
+  color: #E7E7EB;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.Highlights-HumidityPer {
+  color: #E7E7EB;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.Highlights-HumidityPerValue {
+  font-size: 2.4rem;
+}
+
+.Highlights-HumidityPerIndicator {
+  max-width: 220px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.Highlights-VisibilityHeading {
+  color: #E7E7EB;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.Highlights-VisibilityDistance {
+  color: #E7E7EB;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.Highlights-VisibilityDistanceValue {
+  font-size: 2.4rem;
+}
+
+.Highlights-AirHeading {
+  color: #E7E7EB;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.Highlights-AirPressure {
+  color: #E7E7EB;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.Highlights-AirPressureValue {
+  font-size: 2.4rem;
+}
+
+.Highlights-Wind, .Highlights-Humidity, .Highlights-Visibility, .Highlights-Air {
+  padding: 1rem 0;
+  grid-column: span 12;
+  background-color: #1E213A;
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (min-width: 786px) {
+  .Highlights-Wind, .Highlights-Humidity, .Highlights-Visibility, .Highlights-Air {
+    grid-column: span 6;
+    max-width: unset;
+  }
+}
+
+.indicatorPer {
+  color: #E7E7EB;
+  font-size: .7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.indicatorLevelContainer {
+  height: 4px;
+  width: 100%;
+  background-color: #E7E7EB;
+  border-radius: 10rem;
+}
+
+.indicatorLevel {
+  height: 100%;
+  width: 84%;
+  background-color: #1fcf1f;
+}
+
+.indicatorPerSymbol {
+  text-align: right;
+  color: #E7E7EB;
+  font-size: .7rem;
+}
+
+.FutureCard {
+  margin-top: 2rem;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+@media (min-width: 786px) {
+  .FutureCard {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    max-width: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .FutureCard {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.FutureCard-Item {
+  background-color: #1E213A;
+  padding: .7rem .8rem;
+  border-radius: 10px;
+}
+
+.FutureCard-Date {
+  font-size: .9rem;
+  color: #E7E7EB;
+  text-align: center;
+}
+
+.FutureCard-WeatherImg {
+  width: 57px;
+  height: 57px;
+  display: block;
+  margin: 0 auto;
+  margin-top: .3rem;
+}
+
+.FutureCard-Desc {
+  color: #E7E7EB;
+  font-size: .8rem;
+  text-align: center;
+  margin: .5rem 0 1rem;
+}
+
+.FutureCard-MinMaxTemp {
+  font-size: .8rem;
+  color: #E7E7EB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.FutureCard-MinTemp, .FutureCard-MaxTemp {
+  position: relative;
+}
+
+.FutureCard-MinTemp::before, .FutureCard-MaxTemp::before {
+  content: "o";
+  font-weight: normal;
+  font-size: .5rem;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+}
+/*# sourceMappingURL=cards.css.map */

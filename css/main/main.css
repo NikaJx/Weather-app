@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 786px) {
+  .app-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-container {
+    -ms-grid-columns: 30% 70%;
+        grid-template-columns: 30% 70%;
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: .75rem;
+  color: #656588;
+  text-align: center;
+}
+
+.attribution a {
+  color: #8b8ba3;
+}
+
+.errorInput {
+  color: #d17f7f;
+  font-size: .8rem;
+  margin-top: .5rem;
+  display: none;
+}
+
+.errorInput-visible {
+  display: block;
+}
+
+.recent-img {
+  width: 15px;
+  height: auto;
+  -webkit-filter: invert(70%);
+          filter: invert(70%);
+  vertical-align: text-top;
+  margin-right: .5rem;
+}
+
+.recent-cities-name {
+  color: #a7a7a7;
+  margin-top: 2rem;
+  font-size: .8rem;
+  display: none;
+}
+
+.recent-cities-name-visible {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

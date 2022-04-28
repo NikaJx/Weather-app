@@ -1,0 +1,241 @@
+.cards-container {
+  background-color: #100E1D;
+}
+
+.cards-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+}
+
+.Highlights {
+  &-Heading {
+    color: #E7E7EB;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    
+    @media (min-width: 786px) {
+      text-align: left;
+      font-size: 1.1rem;
+      margin-top: unset;
+    }
+  }
+
+  &-Row {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 2rem;
+
+    @media (min-width: 786px) {
+      grid-gap: 1rem;
+      justify-content: center;
+    }
+  }
+
+  &-Wind {
+    &Heading {
+      color: #E7E7EB;
+      font-size: .9rem;
+      text-align: center;
+    }
+    
+    &Value {
+      text-align: center;
+      color: #E7E7EB;
+      font-size: 1.5rem;
+      &Num {
+        font-size: 2.4rem;
+        vertical-align: center;
+        font-weight: 500;
+      }
+    }
+
+    &Direction {
+      text-align: center;
+      color: #E7E7EB;
+      font-size: .9rem;
+      img {
+        width: 25px;
+        height: 25px;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  &-Humidity {
+    &Heading {
+      color: #E7E7EB;
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    &Per {
+      color: #E7E7EB;
+      font-size: 1.5rem;
+      text-align: center;
+      &Value {
+        font-size:2.4rem;
+      }
+    }
+
+    &PerIndicator {
+      max-width: 220px;
+      width: 90%;
+      margin: 0 auto;
+      // inner content below
+    }
+  }
+
+  &-Visibility {
+    &Heading {
+      color: #E7E7EB;
+      font-size: .9rem;
+      text-align: center;
+    }
+    
+    &Distance {
+      color: #E7E7EB;
+      text-align: center;
+      font-size: 1.5rem;
+      &Value {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &-Air {
+    &Heading {
+      color: #E7E7EB;
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    &Pressure {
+      color: #E7E7EB;
+      font-size: 1.5rem;
+      text-align: center;
+      &Value {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &-Wind,
+  &-Humidity,
+  &-Visibility,
+  &-Air {
+    padding: 1rem 0;
+    grid-column: span 12;
+    background-color: #1E213A;
+    max-width: 350px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media(min-width: 786px) {
+      grid-column: span 6;
+      max-width: unset;
+    }
+  }
+}
+
+
+.indicator {
+  &Per {
+    color: #E7E7EB;
+    font-size: .7rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &LevelContainer {
+    height: 4px;
+    width: 100%;
+    background-color: #E7E7EB;
+    border-radius: 10rem;
+  }
+
+  &Level {
+    height: 100%;
+    width: 84%;
+    background-color: #1fcf1f;
+  }
+
+  &PerSymbol {
+    text-align: right;
+    color: #E7E7EB;
+    font-size: .7rem;
+  }
+}
+
+// -----------------------------------------------------
+
+.FutureCard {
+  margin-top: 2rem;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  @media (min-width: 786px) {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: unset;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+  }
+
+  &-Item {
+    background-color: #1E213A;
+    padding: .7rem .8rem;
+  }
+
+  &-Date {
+    font-size: .9rem;
+    color: #E7E7EB;
+    text-align: center;
+  }
+
+  &-WeatherImg {
+    width: 57px;
+    height: 57px;
+    display: block;
+    margin: 0 auto;
+    margin-top: .3rem;
+  }
+
+  &-Desc {
+    color: #E7E7EB;
+    font-size: .8rem;
+    text-align: center;
+    margin: .5rem 0 1rem;
+  }
+
+  &-MinMaxTemp {
+    font-size: .8rem;
+    color: #E7E7EB;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-MinTemp,
+  &-MaxTemp {
+    position: relative;
+    &::before {
+      content: "o";
+      font-weight: normal;
+      font-size: .5rem;
+      position: absolute;
+      top: -5px;
+      left: -3px;
+    }
+  }
+}
+
