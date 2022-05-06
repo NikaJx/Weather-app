@@ -204,15 +204,34 @@ function switchBackRecent() {
 }
 
 
-navigator.geolocation.getCurrentPosition((position) => {
-  let lat, long;
-  lat = position.coords.latitude;
-  long = position.coords.longitude;
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly,alerts&appid=114843591b3cb4652a2b94e65486c00a&units=metric&lang=en`;
+  function onSuccess(position) {
+      let lat, long;
+    
+      lat = position.coords.latitude;
+      long = position.coords.longitude;
 
-  getWeatherData(url, lat, long);
-});
+      let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly,alerts&appid=114843591b3cb4652a2b94e65486c00a&units=metric&lang=en`;
+
+    getWeatherData(url, lat, long);
+  }
+  
+function onError() {
+  const popOpen = document.querySelector('.popup');
+  const closeOpen = document.querySelector('.popup__close');
+
+  popOpen.classList.add('open');
+  closeOpen.addEventListener('click', () => {
+    popOpen.classList.remove('open');
+  });
+
+  setTimeout(() => {
+    popOpen.classList.remove('open');
+  }, 5000);
+}
+  
+
 
 (function () {
   const date = new Date().toString();
