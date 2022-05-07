@@ -228,6 +228,7 @@ function onError() {
 
   setTimeout(() => {
     popOpen.classList.remove('open');
+      document.querySelector(".SearchForPlacesInput ").style.left = '0px';
   }, 5000);
 }
   
